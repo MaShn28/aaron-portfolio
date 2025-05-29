@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About me - Learn more about my background, education, and personal interests">
+    <title>My Portfolio | About Me</title>
+    
+    <!-- Fonts: Inter (body) + Playfair Display (headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Base path for GitHub Pages compatibility -->
+    <script src="js/base-path.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/globals.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Progress Bar (Scroll indicator) -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <a href="index.html" class="logo">
+                    <h3 style="margin: 0;">AARON<span class="gradient-text">SAGUISA</span></h3>
+                </a>
+                
+                <div class="menu-toggle" aria-label="Toggle menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="resume.html">Résumé</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Title Section -->
+        <section style="padding: calc(var(--header-height) + var(--space-md)) 0 var(--space-md);">
+            <div class="container">
+                <h1 class="reveal">About <span class="gradient-text">Me</span></h1>
+            </div>
+        </section>
+        
+        <!-- Main About Content -->
+        <section>
+            <div class="container">
+                <div class="grid grid-2" style="align-items: center; gap: var(--space-lg);">
+                    <!-- Profile Image with Bold Brutalist styling -->
+                    <div class="reveal" style="position: relative;">
+                        <div style="border: var(--border-thick); box-shadow: var(--box-shadow-lg); overflow: hidden;">
+                            <img src="assets/images/profile-placeholder.webp" alt="Aaron Jan Saguisa" 
+                                 style="width: 100%; height: auto; display: block;" loading="lazy">
+                        </div>
+                        <!-- Decorative element - Bold Brutalist style -->
+                        <div style="position: absolute; bottom: -20px; right: -20px; width: 120px; height: 120px; 
+                                    background: var(--gradient-main); z-index: -1;"></div>
+                    </div>
+                    
+                    <!-- About Content -->
+                    <div class="reveal">
+                        <h2>Hello, I'm <span class="gradient-text">AARON JAN SAGUISA</span></h2>
+                        <p style="font-size: var(--fs-md); margin-bottom: var(--space-md);">
+                            Computer Science Student | 4th Year - Cavite State University, Bacoor Campus
+                        </p>
+                        
+                        <div class="card" style="margin-bottom: var(--space-md);">
+                            <h3>Bio</h3>
+                            <p>
+                                I'm a friendly 22-year-old Computer Science student born on January 31, 2003. I'm currently in my 4th year of studies while also working as an intern at Concentrix to gain real-world experience. As a working student, I also deliver as a rider to help support my family financially. I'm passionate about technology and believe in balancing hard work with enjoying life.
+                            </p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Contact Information</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: var(--space-xs);"><strong>Email:</strong> aaron.saguisa@example.com</li>
+                                <li style="margin-bottom: var(--space-xs);"><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/aaronjansaguisa</a></li>
+                                <li style="margin-bottom: var(--space-xs);"><strong>GitHub:</strong> <a href="#">github.com/aaronjansaguisa</a></li>
+                                <li><strong>Location:</strong> Imus, Cavite, Philippines</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education & Background -->
+        <section style="background: linear-gradient(135deg, rgba(255,56,100,0.1), rgba(45,226,230,0.1));">
+            <div class="container">
+                <h2 class="text-center reveal">My <span class="gradient-text">Background</span></h2>
+                
+                <div class="grid grid-2 reveal" style="gap: var(--space-lg);">
+                    <!-- Education -->
+                    <div class="card">
+                        <h3>Education</h3>
+                        <div style="margin-bottom: var(--space-md);">
+                            <h4>Bachelor of Science in Computer Science</h4>
+                            <p><strong>Cavite State University – Bacoor Campus</strong> | 2021 - Present</p>
+                            <p>Currently in my 4th year, focusing on programming, software development, and computer systems. Balancing academics with internship experience.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Work Experience -->
+                    <div class="card">
+                        <h3>Work Experience</h3>
+                        <div style="margin-bottom: var(--space-md);">
+                            <h4>Intern</h4>
+                            <p><strong>Concentrix</strong> | Current</p>
+                            <p>Gaining practical experience in a professional IT environment while completing my studies.</p>
+                        </div>
+                        
+                        <div>
+                            <h4>Delivery Rider</h4>
+                            <p><strong>Self-employed</strong> | Current</p>
+                            <p>Working as a delivery rider to help support my family financially while completing my education.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Family Context & Personal Life -->
+        <section>
+            <div class="container">
+                <h2 class="text-center reveal">Personal <span class="gradient-text">Life</span></h2>
+                
+                <div class="card reveal">
+                    <h3>Family Context</h3>
+                    <p>
+                        I grew up in Imus, Cavite as the middle child in a family of five. I have one sister and one older brother. My family has taught me important values in life, especially to be kind and to never hurt others. Their support and lessons have shaped the person I am today.
+                    </p>
+                    <p>
+                        Outside of my studies and work, I enjoy playing online games with my friends. I'm also passionate about rescuing stray cats — I've already rescued five, although sadly, some of them didn't survive. These activities help me maintain balance in my busy life.
+                    </p>
+                </div>
+                
+                <!-- Interests & Hobbies -->
+                <div class="grid grid-3 reveal" style="margin-top: var(--space-lg);">
+                    <div class="card">
+                        <h3>Hobbies</h3>
+                        <ul style="list-style-position: inside; padding-left: var(--space-sm);">
+                            <li>Playing online games</li>
+                            <li>Rescuing stray cats</li>
+                            <li>Learning new technologies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Interests</h3>
+                        <ul style="list-style-position: inside; padding-left: var(--space-sm);">
+                            <li>Computer Science</li>
+                            <li>Animal welfare</li>
+                            <li>Gaming communities</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Values</h3>
+                        <ul style="list-style-position: inside; padding-left: var(--space-sm);">
+                            <li>Kindness</li>
+                            <li>Hard work</li>
+                            <li>Enjoying life ("Don't take life serious, enjoy it.")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section style="background: var(--gradient-main); color: var(--color-light);">
+            <div class="container text-center">
+                <h2 class="reveal" style="color: var(--color-light);">Want to Work Together?</h2>
+                <p class="reveal" style="max-width: 700px; margin: 0 auto var(--space-md);">
+                    Now that you know a bit more about me, I'd love to hear about your project or opportunity.
+                </p>
+                <div class="reveal" style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn" 
+                       style="background: var(--color-light); color: var(--color-primary); border-color: var(--color-light);">
+                        Get In Touch
+                    </a>
+                    <a href="projects.html" class="btn" 
+                       style="background: transparent; color: var(--color-light); border-color: var(--color-light);">
+                        View My Work
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-dark); color: var(--color-light); padding: var(--space-lg) 0;">
+        <div class="container">
+            <div class="grid grid-3" style="gap: var(--space-lg);">
+                <div>
+                    <h3 style="color: var(--color-light);">AARON<span class="gradient-text">SAGUISA</span></h3>
+                    <p>A passionate web developer focused on creating engaging digital experiences.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: var(--color-light);">Home</a></li>
+                        <li><a href="about.html" style="color: var(--color-light);">About</a></li>
+                        <li><a href="projects.html" style="color: var(--color-light);">Projects</a></li>
+                        <li><a href="contact.html" style="color: var(--color-light);">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Connect</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: var(--color-light);">GitHub</a></li>
+                        <li><a href="#" style="color: var(--color-light);">LinkedIn</a></li>
+                        <li><a href="#" style="color: var(--color-light);">Twitter</a></li>
+                        <li><a href="mailto:aaron.saguisa@example.com" style="color: var(--color-light);">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: var(--space-lg); text-align: center; padding-top: var(--space-md); border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; <span id="current-year">2025</span> YOUR NAME. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/card-tilt.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/nav-active.js"></script>
+    
+    <!-- Scroll Progress Bar Script -->
+    <script>
+        // Update progress bar as user scrolls
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+        
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

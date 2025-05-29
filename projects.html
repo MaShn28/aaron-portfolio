@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Showcasing my web development and design projects">
+    <title>My Portfolio | Projects</title>
+    
+    <!-- Fonts: Inter (body) + Playfair Display (headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Base path for GitHub Pages compatibility -->
+    <script src="js/base-path.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/globals.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Progress Bar (Scroll indicator) -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <a href="index.html" class="logo">
+                    <h3 style="margin: 0;">AARON<span class="gradient-text">SAGUISA</span></h3>
+                </a>
+                
+                <div class="menu-toggle" aria-label="Toggle menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="resume.html">Résumé</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Title Section -->
+        <section style="padding: calc(var(--header-height) + var(--space-md)) 0 var(--space-md);">
+            <div class="container">
+                <h1 class="reveal">My <span class="gradient-text">Projects</span></h1>
+                <p class="reveal" style="max-width: 800px;">
+                    This is my portfolio project showcasing my skills and background as a Computer Science student.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Featured Projects Section -->
+        <section>
+            <div class="container">
+                <h2 class="reveal">My <span class="gradient-text">Portfolio</span></h2>
+                
+                <!-- Portfolio Project -->
+                <div class="card reveal" style="margin-bottom: var(--space-lg);">
+                    <div class="grid grid-2" style="gap: var(--space-md);">
+                        <div style="order: 1;">
+                            <div style="border: var(--border-thin); overflow: hidden;">
+                                <img src="assets/images/project1-thumbnail.png" alt="Personal Portfolio Website" 
+                                     style="width: 100%; height: auto; display: block;" loading="lazy">
+                            </div>
+                        </div>
+                        <div style="order: 2;">
+                            <h3>Personal Portfolio Website</h3>
+                            <p style="margin-bottom: var(--space-sm);">
+                                This responsive portfolio website was created to showcase my background as a Computer Science student, 
+                                my work experiences, skills, and personal information. It highlights my journey as a 4th-year student at 
+                                Cavite State University while balancing work responsibilities.
+                            </p>
+                            <p style="margin-bottom: var(--space-md);">
+                                <strong>Tech Stack:</strong> HTML, CSS, JavaScript
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Overview Section -->
+        <section style="background: linear-gradient(135deg, rgba(255,56,100,0.1), rgba(45,226,230,0.1));">
+            <div class="container">
+                <h2 class="text-center reveal">Skills <span class="gradient-text">Used</span></h2>
+                <p class="text-center reveal" style="max-width: 700px; margin: 0 auto var(--space-lg);">
+                    The following skills were utilized in the development of this portfolio project:
+                </p>
+                
+                <div class="grid grid-3 reveal">
+                    <!-- HTML -->
+                    <div class="card">
+                        <h3>HTML</h3>
+                        <p>Semantic HTML structure for accessible and well-organized content presentation.</p>
+                    </div>
+                    
+                    <!-- CSS -->
+                    <div class="card">
+                        <h3>CSS</h3>
+                        <p>Modern styling with responsive design principles to ensure compatibility across all devices.</p>
+                    </div>
+                    
+                    <!-- JavaScript -->
+                    <div class="card">
+                        <h3>JavaScript</h3>
+                        <p>Interactive elements to enhance user experience including animations and navigation features.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Learning Section -->
+        <section>
+            <div class="container">
+                <h2 class="text-center reveal">Learning <span class="gradient-text">Journey</span></h2>
+                <p class="text-center reveal" style="max-width: 700px; margin: 0 auto var(--space-lg);">
+                    Creating this portfolio has been part of my educational journey as a Computer Science student.
+                </p>
+                
+                <div class="card reveal">
+                    <p>
+                        This portfolio represents my growth as a Computer Science student at Cavite State University. It showcases not just my technical skills, but also my personal story—balancing academic studies with work responsibilities as an intern at Concentrix and as a delivery rider to support my family.
+                    </p>
+                    <p>
+                        As I continue my education and gain more experience, this portfolio will evolve to reflect my ongoing journey in the field of Computer Science.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section style="background: var(--gradient-main); color: var(--color-light);">
+            <div class="container text-center">
+                <h2 class="reveal" style="color: var(--color-light);">Let's Connect</h2>
+                <p class="reveal" style="max-width: 700px; margin: 0 auto var(--space-md);">
+                    Feel free to reach out if you'd like to know more about my journey as a Computer Science student.
+                </p>
+                <a href="contact.html" class="btn reveal" 
+                   style="background: var(--color-light); color: var(--color-primary); border-color: var(--color-light);">
+                    Contact Me
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-dark); color: var(--color-light); padding: var(--space-lg) 0;">
+        <div class="container">
+            <div class="grid grid-3" style="gap: var(--space-lg);">
+                <div>
+                    <h3 style="color: var(--color-light);">AARON<span class="gradient-text">SAGUISA</span></h3>
+                    <p>A dedicated Computer Science student with a strong work ethic and friendly personality.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: var(--color-light);">Home</a></li>
+                        <li><a href="about.html" style="color: var(--color-light);">About</a></li>
+                        <li><a href="projects.html" style="color: var(--color-light);">Projects</a></li>
+                        <li><a href="contact.html" style="color: var(--color-light);">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Connect</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: var(--color-light);">GitHub</a></li>
+                        <li><a href="#" style="color: var(--color-light);">LinkedIn</a></li>
+                        <li><a href="#" style="color: var(--color-light);">Twitter</a></li>
+                        <li><a href="mailto:aaron.saguisa@example.com" style="color: var(--color-light);">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: var(--space-lg); text-align: center; padding-top: var(--space-md); border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; <span id="current-year">2025</span> AARON JAN SAGUISA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/card-tilt.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/nav-active.js"></script>
+    
+    <!-- Scroll Progress Bar Script -->
+    <script>
+        // Update progress bar as user scrolls
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+        
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

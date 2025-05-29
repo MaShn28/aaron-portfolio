@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - 404 error">
+    <title>My Portfolio | Page Not Found</title>
+    
+    <!-- Fonts: Inter (body) + Playfair Display (headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Base path for GitHub Pages compatibility -->
+    <script src="js/base-path.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/globals.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+    <style>
+        .error-container {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .error-code {
+            font-size: clamp(6rem, 20vw, 12rem);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+        
+        .error-code::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-main);
+            mix-blend-mode: color;
+            z-index: -1;
+        }
+        
+        .error-text {
+            font-size: var(--fs-xl);
+            margin-bottom: var(--space-md);
+        }
+        
+        .error-subtext {
+            font-size: var(--fs-md);
+            margin-bottom: var(--space-lg);
+            max-width: 600px;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        /* Glitch effect */
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(-2px, 2px);
+            }
+            40% {
+                transform: translate(-2px, -2px);
+            }
+            60% {
+                transform: translate(2px, 2px);
+            }
+            80% {
+                transform: translate(2px, -2px);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+        
+        .glitch {
+            position: relative;
+            animation: glitch 1s infinite;
+            animation-timing-function: steps(2, end);
+        }
+        
+        .glitch::before,
+        .glitch::after {
+            content: "404";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 var(--color-primary);
+            clip-path: inset(0 0 0 0);
+            animation: glitch-anim-1 1s infinite linear alternate-reverse;
+        }
+        
+        .glitch::after {
+            left: -2px;
+            text-shadow: 2px 0 var(--color-secondary);
+            clip-path: inset(0 0 0 0);
+            animation: glitch-anim-2 1s infinite linear alternate-reverse;
+        }
+        
+        @keyframes glitch-anim-1 {
+            0% {
+                clip-path: inset(20% 0 80% 0);
+            }
+            20% {
+                clip-path: inset(60% 0 40% 0);
+            }
+            40% {
+                clip-path: inset(40% 0 60% 0);
+            }
+            60% {
+                clip-path: inset(80% 0 20% 0);
+            }
+            80% {
+                clip-path: inset(10% 0 90% 0);
+            }
+            100% {
+                clip-path: inset(30% 0 70% 0);
+            }
+        }
+        
+        @keyframes glitch-anim-2 {
+            0% {
+                clip-path: inset(10% 0 90% 0);
+            }
+            20% {
+                clip-path: inset(30% 0 70% 0);
+            }
+            40% {
+                clip-path: inset(50% 0 50% 0);
+            }
+            60% {
+                clip-path: inset(70% 0 30% 0);
+            }
+            80% {
+                clip-path: inset(90% 0 10% 0);
+            }
+            100% {
+                clip-path: inset(20% 0 80% 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <a href="index.html" class="logo">
+                    <h3 style="margin: 0;">AARON<span class="gradient-text">SAGUISA</span></h3>
+                </a>
+                
+                <div class="menu-toggle" aria-label="Toggle menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="challenges.html">Challenges</a></li>
+                        <li><a href="future-plans.html">Future Plans</a></li>
+                        <li><a href="resume.html">Résumé</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="error-container">
+            <div class="container">
+                <div class="error-code glitch">404</div>
+                <h1 class="error-text">Page Not Found</h1>
+                <p class="error-subtext">
+                    Oops! The page you're looking for seems to have vanished into the digital void.
+                    It might have been moved, deleted, or never existed in the first place.
+                </p>
+                <div class="error-actions">
+                    <a href="index.html" class="btn btn-primary">Return Home</a>
+                    <a href="contact.html" class="btn">Contact Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-dark); color: var(--color-light); padding: var(--space-lg) 0;">
+        <div class="container">
+            <div class="grid grid-3" style="gap: var(--space-lg);">
+                <div>
+                    <h3 style="color: var(--color-light);">AARON<span class="gradient-text">SAGUISA</span></h3>
+                    <p>A passionate web developer focused on creating engaging digital experiences.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: var(--color-light);">Home</a></li>
+                        <li><a href="about.html" style="color: var(--color-light);">About</a></li>
+                        <li><a href="projects.html" style="color: var(--color-light);">Projects</a></li>
+                        <li><a href="contact.html" style="color: var(--color-light);">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Connect</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: var(--color-light);">GitHub</a></li>
+                        <li><a href="#" style="color: var(--color-light);">LinkedIn</a></li>
+                        <li><a href="#" style="color: var(--color-light);">Twitter</a></li>
+                        <li><a href="mailto:aaron.saguisa@example.com" style="color: var(--color-light);">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: var(--space-lg); text-align: center; padding-top: var(--space-md); border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; <span id="current-year">2025</span> AARON JAN SAGUISA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/nav-active.js"></script>
+    
+    <!-- Current Year Script -->
+    <script>
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

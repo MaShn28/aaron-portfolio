@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact me for project inquiries, collaborations, or questions">
+    <title>My Portfolio | Contact</title>
+    
+    <!-- Fonts: Inter (body) + Playfair Display (headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Base path for GitHub Pages compatibility -->
+    <script src="js/base-path.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/globals.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Additional Contact Form styles -->
+    <style>
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: var(--space-sm);
+            border: var(--border-thin);
+            background: var(--color-light);
+            font-family: var(--font-body);
+            font-size: var(--fs-body);
+            transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: var(--box-shadow-sm);
+            transform: translate(-2px, -2px);
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .error-message {
+            color: var(--color-primary);
+            font-size: var(--fs-sm);
+            margin-top: var(--space-xxs);
+            display: none;
+        }
+        
+        input.error, textarea.error {
+            border-color: var(--color-primary);
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border: var(--border-thin);
+            margin-right: var(--space-xs);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        
+        .social-icon:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--box-shadow-sm);
+        }
+        
+        .form-success {
+            display: none;
+            background: rgba(0, 200, 83, 0.1);
+            border: 2px solid #00c853;
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar (Scroll indicator) -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <a href="index.html" class="logo">
+                    <h3 style="margin: 0;">AARON<span class="gradient-text">SAGUISA</span></h3>
+                </a>
+                
+                <div class="menu-toggle" aria-label="Toggle menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="resume.html">Résumé</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Title Section -->
+        <section style="padding: calc(var(--header-height) + var(--space-md)) 0 var(--space-md);">
+            <div class="container">
+                <h1 class="reveal">Get In <span class="gradient-text">Touch</span></h1>
+                <p class="reveal" style="max-width: 800px;">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    Feel free to reach out using the form below or through my social media channels.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section>
+            <div class="container">
+                <div class="grid grid-2" style="gap: var(--space-lg);">
+                    <!-- Contact Form -->
+                    <div class="reveal">
+                        <div class="card">
+                            <h2>Send Me a Message</h2>
+                            
+                            <!-- Success Message (Hidden by default) -->
+                            <div class="form-success" id="formSuccess">
+                                <h3>Message Sent Successfully!</h3>
+                                <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                            </div>
+                            
+                            <!-- Contact Form with Validation -->
+                            <form action="#" method="POST" class="reveal contact-form" style="margin-top: var(--space-md);">
+                                <div style="margin-bottom: var(--space-md);">
+                                    <label for="name" style="display: block; margin-bottom: var(--space-xs); font-weight: 600;">Name</label>
+                                    <input type="text" id="name" name="name" required style="width: 100%; padding: var(--space-sm); border: var(--border-thin);">
+                                </div>
+                                
+                                <div style="margin-bottom: var(--space-md);">
+                                    <label for="email" style="display: block; margin-bottom: var(--space-xs); font-weight: 600;">Email</label>
+                                    <input type="email" id="email" name="email" required style="width: 100%; padding: var(--space-sm); border: var(--border-thin);">
+                                </div>
+                                
+                                <div style="margin-bottom: var(--space-md);">
+                                    <label for="subject" style="display: block; margin-bottom: var(--space-xs); font-weight: 600;">Subject</label>
+                                    <input type="text" id="subject" name="subject" required style="width: 100%; padding: var(--space-sm); border: var(--border-thin);">
+                                </div>
+                                
+                                <div style="margin-bottom: var(--space-md);">
+                                    <label for="message" style="display: block; margin-bottom: var(--space-xs); font-weight: 600;">Message</label>
+                                    <textarea id="message" name="message" rows="6" required style="width: 100%; padding: var(--space-sm); border: var(--border-thin);"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary" style="min-width: 150px;">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="reveal">
+                        <div class="card" style="height: 100%;">
+                            <h2>Contact Information</h2>
+                            
+                            <div style="margin-bottom: var(--space-md);">
+                                <h3>Let's Connect</h3>
+                                <p>Feel free to reach out through any of the following methods:</p>
+                                
+                                <ul style="list-style: none; padding: 0; margin-top: var(--space-md);">
+                                    <li style="margin-bottom: var(--space-sm); display: flex; align-items: center;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: var(--space-sm);">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                        </svg>
+                                        <a href="mailto:aaron.saguisa@example.com">your.email@example.com</a>
+                                    </li>
+                                    <li style="margin-bottom: var(--space-sm); display: flex; align-items: center;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: var(--space-sm);">
+                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                        </svg>
+                                        <span>(555) 123-4567</span>
+                                    </li>
+                                    <li style="display: flex; align-items: center;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: var(--space-sm);">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        <span>Your City, Country</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Social Media Links -->
+                            <div>
+                                <h3>Follow Me</h3>
+                                <div style="margin-top: var(--space-md);">
+                                    <!-- GitHub -->
+                                    <a href="#" class="social-icon" aria-label="GitHub">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                    </a>
+                                    
+                                    <!-- LinkedIn -->
+                                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                        </svg>
+                                    </a>
+                                    
+                                    <!-- Twitter -->
+                                    <a href="#" class="social-icon" aria-label="Twitter">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                        </svg>
+                                    </a>
+                                    
+                                    <!-- Instagram -->
+                                    <a href="#" class="social-icon" aria-label="Instagram">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section style="padding-top: 0;">
+            <div class="container reveal">
+                <div class="card">
+                    <h2 class="text-center">Location</h2>
+                    <div class="iframe-container" style="border: var(--border-thin); margin-top: var(--space-md);">
+                        <!-- Aaron's location in Imus, Cavite -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1932.4440163592408!2d120.92172529953515!3d14.375889675041726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d363e86d3971%3A0x5ab46c89f0e0f1f2!2sGreengate%20Homes%20Phase%203%20Malagasang%20II-A!5e0!3m2!1sen!2sph!4v1748524533744!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-dark); color: var(--color-light); padding: var(--space-lg) 0;">
+        <div class="container">
+            <div class="grid grid-3" style="gap: var(--space-lg);">
+                <div>
+                    <h3 style="color: var(--color-light);">AARON<span class="gradient-text">SAGUISA</span></h3>
+                    <p>A passionate web developer focused on creating engaging digital experiences.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: var(--color-light);">Home</a></li>
+                        <li><a href="about.html" style="color: var(--color-light);">About</a></li>
+                        <li><a href="projects.html" style="color: var(--color-light);">Projects</a></li>
+                        <li><a href="contact.html" style="color: var(--color-light);">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Connect</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: var(--color-light);">GitHub</a></li>
+                        <li><a href="#" style="color: var(--color-light);">LinkedIn</a></li>
+                        <li><a href="#" style="color: var(--color-light);">Twitter</a></li>
+                        <li><a href="mailto:aaron.saguisa@example.com" style="color: var(--color-light);">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: var(--space-lg); text-align: center; padding-top: var(--space-md); border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; <span id="current-year">2025</span> AARON JAN SAGUISA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/card-tilt.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/nav-active.js"></script>
+    
+    <!-- Form Validation Script -->
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            
+            // Get form elements
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            
+            // Reset previous error states
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(element => {
+                element.style.display = 'none';
+            });
+            
+            const inputs = [nameInput, emailInput, subjectInput, messageInput];
+            inputs.forEach(input => {
+                input.classList.remove('error');
+            });
+            
+            // Validate each field
+            let isValid = true;
+            
+            // Name validation
+            if (!nameInput.value.trim()) {
+                document.getElementById('nameError').style.display = 'block';
+                nameInput.classList.add('error');
+                isValid = false;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
+                document.getElementById('emailError').style.display = 'block';
+                emailInput.classList.add('error');
+                isValid = false;
+            }
+            
+            // Subject validation
+            if (!subjectInput.value.trim()) {
+                document.getElementById('subjectError').style.display = 'block';
+                subjectInput.classList.add('error');
+                isValid = false;
+            }
+            
+            // Message validation
+            if (!messageInput.value.trim()) {
+                document.getElementById('messageError').style.display = 'block';
+                messageInput.classList.add('error');
+                isValid = false;
+            }
+            
+            // If valid, show success message (in a real implementation, you would submit to a server)
+            if (isValid) {
+                document.getElementById('formSuccess').style.display = 'block';
+                document.getElementById('contactForm').reset();
+                
+                // Scroll to success message
+                document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth' });
+                
+                // In a real implementation, you would handle form submission here
+                // For example:
+                // fetch('/submit-form', {
+                //     method: 'POST',
+                //     body: new FormData(document.getElementById('contactForm'))
+                // })
+                // .then(response => response.json())
+                // .then(data => console.log(data))
+                // .catch(error => console.error('Error:', error));
+            }
+            
+            return isValid;
+        }
+    </script>
+    
+    <!-- Scroll Progress Bar Script -->
+    <script>
+        // Update progress bar as user scrolls
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+        
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

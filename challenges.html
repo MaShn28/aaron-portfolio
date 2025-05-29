@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Challenges faced and key learnings from my web development journey">
+    <title>My Portfolio | Challenges & Learnings</title>
+    
+    <!-- Fonts: Inter (body) + Playfair Display (headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Base path for GitHub Pages compatibility -->
+    <script src="js/base-path.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/globals.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Progress Bar (Scroll indicator) -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <a href="index.html" class="logo">
+                    <h3 style="margin: 0;">AARON<span class="gradient-text">SAGUISA</span></h3>
+                </a>
+                
+                <div class="menu-toggle" aria-label="Toggle menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="challenges.html">Challenges</a></li>
+                        <li><a href="future-plans.html">Future Plans</a></li>
+                        <li><a href="resume.html">Résumé</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Title Section -->
+        <section style="padding: calc(var(--header-height) + var(--space-md)) 0 var(--space-md);">
+            <div class="container">
+                <h1 class="reveal">Challenges & <span class="gradient-text">Learnings</span></h1>
+                <p class="reveal" style="max-width: 800px;">
+                    Every project brings unique challenges that lead to valuable lessons. Here, I share the biggest hurdles 
+                    I've faced in my development journey and the key insights I've gained along the way.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Major Challenges Section -->
+        <section>
+            <div class="container">
+                <h2 class="reveal">Biggest <span class="gradient-text">Hurdles</span></h2>
+                
+                <div class="grid grid-2 reveal">
+                    <!-- Challenge 1 -->
+                    <div class="card">
+                        <h3>Responsive Design Complexity</h3>
+                        <p>
+                            Creating truly responsive layouts that work seamlessly across all device sizes proved to be more 
+                            challenging than expected. Breaking points that worked for one component would cause issues with others.
+                        </p>
+                        <p>
+                            The complexity increased when dealing with interactive elements like navigation menus and complex 
+                            grid layouts that needed to transform completely on mobile devices.
+                        </p>
+                    </div>
+                    
+                    <!-- Challenge 2 -->
+                    <div class="card">
+                        <h3>Browser Compatibility Issues</h3>
+                        <p>
+                            Despite modern browser standards, cross-browser compatibility remains a significant challenge. 
+                            Features that worked perfectly in Chrome would break in Safari or older versions of Edge.
+                        </p>
+                        <p>
+                            This was particularly true for CSS Grid implementations and newer JavaScript APIs, requiring 
+                            extensive testing and fallback solutions.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2 reveal mt-lg">
+                    <!-- Challenge 3 -->
+                    <div class="card">
+                        <h3>Performance Optimization</h3>
+                        <p>
+                            Balancing aesthetic richness with performance was a constant battle. High-resolution images, 
+                            animations, and interactive elements added visual appeal but slowed page load times significantly.
+                        </p>
+                        <p>
+                            Finding the right balance required extensive experimentation with various optimization techniques 
+                            and performance testing tools.
+                        </p>
+                    </div>
+                    
+                    <!-- Challenge 4 -->
+                    <div class="card">
+                        <h3>Accessibility Implementation</h3>
+                        <p>
+                            Ensuring web accessibility while maintaining design integrity proved challenging. Screen reader 
+                            compatibility, keyboard navigation, and maintaining sufficient color contrast often required 
+                            significant design adjustments.
+                        </p>
+                        <p>
+                            Learning to build with accessibility in mind from the beginning, rather than retrofitting it later, 
+                            was a valuable lesson.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Key Learnings Section -->
+        <section style="background: linear-gradient(135deg, rgba(255,56,100,0.1), rgba(45,226,230,0.1));">
+            <div class="container">
+                <h2 class="text-center reveal">Key <span class="gradient-text">Learnings</span></h2>
+                <p class="text-center reveal" style="max-width: 700px; margin: 0 auto var(--space-lg);">
+                    The challenges I've faced have led to invaluable insights that continue to shape my approach to web development.
+                </p>
+                
+                <div class="grid grid-3 reveal">
+                    <!-- Learning 1 -->
+                    <div class="card">
+                        <h3>Mobile-First Approach</h3>
+                        <p>
+                            I've learned that designing for mobile first and then scaling up to larger screens leads to more 
+                            consistent and maintainable responsive designs than the reverse approach.
+                        </p>
+                        <p>
+                            This methodology forces me to prioritize content and functionality from the beginning, resulting in 
+                            better overall user experiences.
+                        </p>
+                    </div>
+                    
+                    <!-- Learning 2 -->
+                    <div class="card">
+                        <h3>Progressive Enhancement</h3>
+                        <p>
+                            Building core functionality that works everywhere, then enhancing the experience for more capable 
+                            browsers has proven more effective than trying to create fallbacks after the fact.
+                        </p>
+                        <p>
+                            This approach ensures all users receive a functional experience, regardless of their device or browser.
+                        </p>
+                    </div>
+                    
+                    <!-- Learning 3 -->
+                    <div class="card">
+                        <h3>Value of Testing</h3>
+                        <p>
+                            Regular testing across different devices, browsers, and with actual users has been invaluable for 
+                            identifying issues early and understanding real-world usage patterns.
+                        </p>
+                        <p>
+                            Incorporating testing throughout the development process, rather than only at the end, has significantly 
+                            improved the quality of my work.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2 reveal mt-lg">
+                    <!-- Learning 4 -->
+                    <div class="card">
+                        <h3>Power of CSS Variables</h3>
+                        <p>
+                            Adopting CSS custom properties (variables) has transformed how I structure stylesheets. They provide 
+                            flexibility for theming, responsive adjustments, and maintaining design consistency.
+                        </p>
+                        <p>
+                            Creating a robust design system with variables for colors, spacing, typography, and animations has 
+                            streamlined development and made projects more maintainable.
+                        </p>
+                    </div>
+                    
+                    <!-- Learning 5 -->
+                    <div class="card">
+                        <h3>Importance of Semantic HTML</h3>
+                        <p>
+                            Writing semantically correct HTML is not just about accessibility—it improves SEO, makes code more 
+                            maintainable, and often leads to more logical document structure.
+                        </p>
+                        <p>
+                            Taking time to choose the right HTML elements pays dividends in terms of browser native functionality, 
+                            assistive technology compatibility, and future-proofing content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Personal Growth Section -->
+        <section>
+            <div class="container">
+                <h2 class="text-center reveal">Personal <span class="gradient-text">Growth</span></h2>
+                
+                <div class="card reveal">
+                    <h3>Reflections on My Journey</h3>
+                    <p>
+                        Beyond technical skills, my development journey has taught me valuable personal and professional lessons. 
+                        I've learned the importance of patience when debugging complex issues, the value of community in overcoming 
+                        challenges, and the necessity of continuous learning in a rapidly evolving field.
+                    </p>
+                    <p>
+                        Perhaps most importantly, I've gained confidence in my ability to tackle difficult problems by breaking them 
+                        down into manageable parts and researching solutions methodically. This problem-solving mindset has proven 
+                        valuable not just in coding, but in all aspects of my professional life.
+                    </p>
+                    <p>
+                        The iterative nature of web development has also taught me to embrace the process of refinement. No project 
+                        is ever truly "perfect," but each iteration brings improvements and new insights that inform future work.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quote Section -->
+        <section style="background: var(--gradient-main); color: var(--color-light);">
+            <div class="container text-center">
+                <div class="reveal">
+                    <h2 style="color: var(--color-light);">My Development Philosophy</h2>
+                    <p style="font-size: var(--fs-lg); font-family: var(--font-heading); max-width: 800px; margin: var(--space-md) auto; font-style: italic;">
+                        "The most valuable skill is not knowing everything, but knowing how to find and apply solutions effectively."
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-dark); color: var(--color-light); padding: var(--space-lg) 0;">
+        <div class="container">
+            <div class="grid grid-3" style="gap: var(--space-lg);">
+                <div>
+                    <h3 style="color: var(--color-light);">AARON<span class="gradient-text">SAGUISA</span></h3>
+                    <p>A passionate web developer focused on creating engaging digital experiences.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: var(--color-light);">Home</a></li>
+                        <li><a href="about.html" style="color: var(--color-light);">About</a></li>
+                        <li><a href="projects.html" style="color: var(--color-light);">Projects</a></li>
+                        <li><a href="contact.html" style="color: var(--color-light);">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Connect</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: var(--color-light);">GitHub</a></li>
+                        <li><a href="#" style="color: var(--color-light);">LinkedIn</a></li>
+                        <li><a href="#" style="color: var(--color-light);">Twitter</a></li>
+                        <li><a href="mailto:aaron.saguisa@example.com" style="color: var(--color-light);">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: var(--space-lg); text-align: center; padding-top: var(--space-md); border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; <span id="current-year">2025</span> AARON JAN SAGUISA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/card-tilt.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/nav-active.js"></script>
+    
+    <!-- Scroll Progress Bar Script -->
+    <script>
+        // Update progress bar as user scrolls
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+        
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

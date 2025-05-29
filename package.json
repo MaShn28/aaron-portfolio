@@ -1,0 +1,21 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website with Bold Brutalist design and Gradient Glow aesthetics",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server",
+    "minify:css": "npx clean-css-cli css/globals.css --output css/globals.min.css",
+    "minify:js": "npx terser js/base-path.js js/card-tilt.js js/liquid-blob.js js/nav-active.js js/scroll-reveal.js --compress --mangle --output js/bundle.min.js",
+    "build": "npm run minify:css && npm run minify:js"
+  },
+  "keywords": [
+    "portfolio",
+    "web",
+    "development",
+    "brutalist",
+    "design"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

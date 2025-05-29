@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing my web development projects and skills">
+    <title>My Portfolio | Home</title>
+    
+    <!-- Fonts: Inter (body) + Playfair Display (headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Base path for GitHub Pages compatibility -->
+    <script src="js/base-path.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/globals.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Progress Bar (Scroll indicator) -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <a href="index.html" class="logo">
+                    <h3 style="margin: 0;">AARON<span class="gradient-text">SAGUISA</span></h3>
+                </a>
+                
+                <div class="menu-toggle" aria-label="Toggle menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="resume.html">Résumé</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Liquid Blob Canvas -->
+        <section class="hero" style="height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;">
+            <canvas id="hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></canvas>
+            
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="hero-content reveal">
+                    <h1>Hi, I'm <span class="gradient-text">AARON JAN SAGUISA</span></h1>
+                    <h2 style="font-family: var(--font-body); font-weight: 500; text-transform: uppercase; letter-spacing: 2px;">Computer Science Student</h2>
+                    <p style="max-width: 600px; margin: var(--space-md) 0;">
+                        I'm a 4th-year Computer Science student at Cavite State University with a passion for technology and learning. Welcome to my portfolio.
+                    </p>
+                    <div class="hero-buttons" style="margin-top: var(--space-lg);">
+                        <a href="projects.html" class="btn btn-primary">View Projects</a>
+                        <a href="contact.html" class="btn" style="margin-left: var(--space-sm);">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+        <!-- About Me Preview Section -->
+        <section style="background: linear-gradient(135deg, rgba(255,56,100,0.1), rgba(45,226,230,0.1));">
+            <div class="container">
+                <div class="grid grid-2" style="align-items: center;">
+                    <div class="reveal">
+                        <h2>About <span class="gradient-text">Me</span></h2>
+                        <p>Hello! I'm a 22-year-old Computer Science student with a friendly personality and strong work ethic. I balance my studies with work as an intern at Concentrix and as a delivery rider to support my family.</p>
+                        <p>I'm currently in my 4th year at Cavite State University – Bacoor Campus, pursuing a Bachelor of Science in Computer Science while gaining real-world experience.</p>
+                        <a href="about.html" class="btn mt-md">Learn More</a>
+                    </div>
+                    <div class="reveal" style="position: relative;">
+                        <div style="border: var(--border-thick); box-shadow: var(--box-shadow-lg); overflow: hidden;">
+                            <img src="assets/images/profile-placeholder.webp" alt="Aaron Jan Saguisa" 
+                                 style="width: 100%; height: auto; display: block;" loading="lazy">
+                        </div>
+                        <div style="position: absolute; bottom: -20px; right: -20px; width: 120px; height: 120px; 
+                                    background: var(--gradient-main); z-index: -1;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Preview Section -->
+        <section>
+            <div class="container">
+                <h2 class="text-center reveal">My <span class="gradient-text">Skills</span></h2>
+                <div class="grid grid-3 reveal">
+                    <!-- Skill Category 1 -->
+                    <div class="card">
+                        <h3>Frontend</h3>
+                        <ul style="list-style-position: inside; padding-left: var(--space-sm);">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Responsive Design</li>
+                            <li>CSS Animations</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Skill Category 2 -->
+                    <div class="card">
+                        <h3>Design</h3>
+                        <ul style="list-style-position: inside; padding-left: var(--space-sm);">
+                            <li>UI/UX Principles</li>
+                            <li>Adobe Creative Suite</li>
+                            <li>Figma</li>
+                            <li>Typography</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Skill Category 3 -->
+                    <div class="card">
+                        <h3>Tools</h3>
+                        <ul style="list-style-position: inside; padding-left: var(--space-sm);">
+                            <li>Git & GitHub</li>
+                            <li>VS Code</li>
+                            <li>Command Line</li>
+                            <li>Chrome DevTools</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-lg reveal">
+                    <a href="skills.html" class="btn">View All Skills</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section style="background: var(--gradient-main); color: var(--color-light);">
+            <div class="container text-center">
+                <h2 class="reveal" style="color: var(--color-light);">Let's Work Together</h2>
+                <p class="reveal" style="max-width: 700px; margin: 0 auto var(--space-md);">
+                    I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+                </p>
+                <a href="contact.html" class="btn reveal" 
+                   style="background: var(--color-light); color: var(--color-primary); border-color: var(--color-light);">
+                    Get In Touch
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-dark); color: var(--color-light); padding: var(--space-lg) 0;">
+        <div class="container">
+            <div class="grid grid-3" style="gap: var(--space-lg);">
+                <div>
+                    <h3 style="color: var(--color-light);">AARON<span class="gradient-text">SAGUISA</span></h3>
+                    <p>A passionate web developer focused on creating engaging digital experiences.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: var(--color-light);">Home</a></li>
+                        <li><a href="about.html" style="color: var(--color-light);">About</a></li>
+                        <li><a href="projects.html" style="color: var(--color-light);">Projects</a></li>
+                        <li><a href="contact.html" style="color: var(--color-light);">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-light);">Connect</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: var(--color-light);">GitHub</a></li>
+                        <li><a href="#" style="color: var(--color-light);">LinkedIn</a></li>
+                        <li><a href="#" style="color: var(--color-light);">Twitter</a></li>
+                        <li><a href="mailto:aaron.saguisa@example.com" style="color: var(--color-light);">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: var(--space-lg); text-align: center; padding-top: var(--space-md); border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; <span id="current-year">2025</span> YOUR NAME. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/liquid-blob.js"></script>
+    <script src="js/card-tilt.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/nav-active.js"></script>
+    
+    <!-- Scroll Progress Bar Script -->
+    <script>
+        // Update progress bar as user scrolls
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+        
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
